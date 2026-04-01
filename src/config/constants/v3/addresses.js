@@ -1,0 +1,93 @@
+// import { ChainId } from 'thena-sdk'
+import {ChainId} from '../../constants'
+
+export const V2Exchanges = {
+  Woof: 'Woof',
+  //Uniswap: 'Uniswap',
+}
+
+export const V3_CORE_FACTORY_ADDRESSES = {
+  [ChainId.MAINNET]: '0x306F06C147f064A010530292A1EB6737c3e378e4',
+}
+
+export const POOL_DEPLOYER_ADDRESS = {
+  [ChainId.MAINNET]: '0xc89F69Baa3ff17a842AB2DE89E5Fc8a8e2cc7358',
+}
+
+export const QUOTER_ADDRESSES = {
+  [ChainId.MAINNET]: '0xeA68020D6A9532EeC42D4dB0f92B83580c39b2cA',
+}
+
+export const SWAP_ROUTER_ADDRESSES = {
+  [ChainId.MAINNET]: '0x327Dd3208f0bCF590A66110aCB6e5e6941A4EfA0',
+}
+
+export const NONFUNGIBLE_POSITION_MANAGER_ADDRESSES = {
+  [ChainId.MAINNET]: '0xa51ADb08Cbe6Ae398046A23bec013979816B77Ab',
+}
+
+export const GAMMA_UNIPROXY_ADDRESSES = {
+  [ChainId.MAINNET]: '0x6B3d98406779DDca311E6C43553773207b506Fa6',
+}
+
+export const GAMMA_MASTERCHEF_ADDRESSES = [
+  {
+    [ChainId.MAINNET]: '0x20ec0d06f447d550fc6edee42121bc8c1817b97d',
+  },
+  {
+    [ChainId.MAINNET]: '0x68678Cf174695fc2D27bd312DF67A3984364FFDd',
+  },
+]
+
+export const MULTICALL_ADDRESS = {
+  [ChainId.MAINNET]: '0x76ddc5b44245352E8800d4E38170ae974Fe31731',
+}
+
+export const V3_MIGRATOR_ADDRESSES = {
+  [ChainId.MAINNET]: '0x2AC5617f1C04641393bD3246F38521ede0FC9011',
+}
+
+export const REAL_STAKER_ADDRESS = {
+  [ChainId.MAINNET]: '0x32CFF674763b06B983C0D55Ef2e41B84D16855bb',
+}
+
+export const FINITE_FARMING = {
+  [ChainId.MAINNET]: '0x7fb6b676b7F7Eaf8F60b057697e6e1B108189036',
+}
+
+export const INFINITE_FARMING_ADDRESS = {
+  [ChainId.MAINNET]: '0x2308BD5B1f66C32CC482254B4EE99cc7708d2e41',
+}
+
+export const FARMING_CENTER = {
+  [ChainId.MAINNET]: '0xfbc41AcDF542752E2295024c9e0f8A6FB6276e1F',
+}
+
+export const V2_FACTORY_ADDRESSES = {
+  [ChainId.MAINNET]: '0xAFD89d21BdB66d00817d4153E055830B1c2B3970',
+}
+
+export const EXCHANGE_FACTORY_ADDRESS_MAPS = {
+  [V2Exchanges.Woof]: {
+    [ChainId.MAINNET]: '0xAFD89d21BdB66d00817d4153E055830B1c2B3970',
+  },
+}
+
+export const EXCHANGE_PAIR_INIT_HASH_MAPS = {
+  [V2Exchanges.Woof]: {
+    //TODO: Verify the Pair INIT hash
+    [ChainId.MAINNET]: '0x96e8ac4277198ff8b6f785478aa9a39f403cb768dd02cbee326c3e7da348845f',
+  },
+}
+
+export const V2_ROUTER_ADDRESS = {
+  [ChainId.MAINNET]: '0x1b02da8cb0d097eb8d57a175b88c7d8b47997506',
+}
+
+export const ENS_REGISTRAR_ADDRESSES = {
+  [ChainId.MAINNET]: '0x00000000000C2E074eC69A0dFb2997BA6C7d2e1e',
+}
+
+export const SOCKS_CONTROLLER_ADDRESSES = {
+  [ChainId.MAINNET]: '0x65770b5283117639760beA3F867b69b3697a91dd',
+}

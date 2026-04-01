@@ -1,0 +1,140 @@
+.footer-wrap {
+  background: transparent;
+  padding: 20px 0;
+  width: 100%;
+
+  // background-position: center;
+  // background-size: cover;
+
+  .links-wrapper {
+    display: flex;
+    align-items: center;
+    flex-direction: column-reverse;
+    width: 100%;
+    //margin-top: 134px;
+
+    @media (min-width: 768px) {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-direction: row;
+    }
+
+    p {
+      font: normal normal normal 14px/42px Inter;
+      color: #fff;
+      opacity: 0.88;
+      @media (min-width: 768px) {
+        font: normal normal normal 18px/42px Inter;
+      }
+    }
+
+    .links {
+      a {
+        margin-right: 14px;
+
+        &:last-child {
+          margin-right: 0;
+        }
+
+        img {
+          max-width: 44px;
+        }
+      }
+    }
+  }
+
+  .content-wrapper-footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .navigation-footer {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 335px;
+    width: 100%;
+    padding-bottom: 24px;
+
+    li {
+      font-size: 17px;
+      margin: 0 19px;
+      line-height: 40px;
+      font-weight: 400;
+
+      &:last-child {
+        margin-right: 0;
+      }
+      @media (min-width: 768px) {
+        font-size: 21px;
+        line-height: 40px;
+        margin-right: 14px;
+      }
+      @media (min-width: 768px) {
+        line-height: 43px;
+      }
+    }
+    @media (min-width: 768px) {
+      padding-bottom: 30px;
+    }
+
+    @media (min-width: 1024px) {
+      max-width: 832px;
+    }
+
+    @media (min-width: 1280px) {
+      padding-bottom: 48px;
+    }
+  }
+
+  .desktop-1 {
+    display: none;
+  }
+
+  .mobile-1 {
+    object-fit: cover;
+    width: 100%;
+    height: 226%;
+    object-position: center;
+  }
+
+  @media (min-width: 1024px) {
+    margin-top: 55px;
+
+    .desktop-1 {
+      display: block;
+    }
+
+    .mobile-1 {
+      display: none;
+    }
+  }
+
+  @media (min-width: 1920px) {
+    margin-top: 80px;
+  }
+
+  @media (min-width: 2400px) {
+    margin-top: 120px;
+  }
+
+  // .footer-padding {
+  //   @media (min-width: 768px) {
+  //     padding: 0px 80px;
+  //   }
+  // }
+  // @media (min-width: 1040px) {
+  //   margin-top: 187.96px;
+  // }
+}
+
+.doc-link-footer {
+  color: #3382f1;
+  cursor: pointer;
+}

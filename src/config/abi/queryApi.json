@@ -1,0 +1,159 @@
+[
+    {
+      "inputs": [],
+      "stateMutability": "nonpayable",
+      "type": "constructor"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "tokenId",
+          "type": "uint256"
+        },
+        {
+          "internalType": "address[]",
+          "name": "pairs",
+          "type": "address[]"
+        }
+      ],
+      "name": "getExpectedClaimForNextEpoch",
+      "outputs": [
+        {
+          "components": [
+            {
+              "internalType": "address",
+              "name": "pair",
+              "type": "address"
+            },
+            {
+              "internalType": "address",
+              "name": "guage",
+              "type": "address"
+            },
+            {
+              "internalType": "uint256",
+              "name": "totalVote",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "accountVote",
+              "type": "uint256"
+            },
+            {
+              "components": [
+                {
+                  "internalType": "address[]",
+                  "name": "tokens",
+                  "type": "address[]"
+                },
+                {
+                  "internalType": "string[]",
+                  "name": "symbols",
+                  "type": "string[]"
+                },
+                {
+                  "internalType": "uint256[]",
+                  "name": "decimals",
+                  "type": "uint256[]"
+                },
+                {
+                  "internalType": "uint256[]",
+                  "name": "amounts",
+                  "type": "uint256[]"
+                }
+              ],
+              "internalType": "struct QueryApi.Bribes",
+              "name": "externalBribe",
+              "type": "tuple"
+            },
+            {
+              "components": [
+                {
+                  "internalType": "address[]",
+                  "name": "tokens",
+                  "type": "address[]"
+                },
+                {
+                  "internalType": "string[]",
+                  "name": "symbols",
+                  "type": "string[]"
+                },
+                {
+                  "internalType": "uint256[]",
+                  "name": "decimals",
+                  "type": "uint256[]"
+                },
+                {
+                  "internalType": "uint256[]",
+                  "name": "amounts",
+                  "type": "uint256[]"
+                }
+              ],
+              "internalType": "struct QueryApi.Bribes",
+              "name": "internalBribe",
+              "type": "tuple"
+            }
+          ],
+          "internalType": "struct QueryApi.VoteInfo[]",
+          "name": "",
+          "type": "tuple[]"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_voter",
+          "type": "address"
+        }
+      ],
+      "name": "initialize",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "pairFactory",
+      "outputs": [
+        {
+          "internalType": "contract IPairFactory",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "underlyingToken",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "voter",
+      "outputs": [
+        {
+          "internalType": "contract IVoter",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ]

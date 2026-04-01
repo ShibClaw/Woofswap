@@ -1,0 +1,194 @@
+[
+{
+"inputs": [],
+"stateMutability": "nonpayable",
+"type": "constructor"
+},
+{
+"inputs": [
+{
+"internalType": "uint256",
+"name": "_tokenId",
+"type": "uint256"
+},
+{
+"internalType": "address[]",
+"name": "_pairs",
+"type": "address[]"
+}
+],
+"name": "getVeNftRewards",
+"outputs": [
+{
+"components": [
+{
+"internalType": "uint256",
+"name": "tokenId",
+"type": "uint256"
+},
+{
+"internalType": "uint256",
+"name": "rebase",
+"type": "uint256"
+},
+{
+"components": [
+{
+"internalType": "address",
+"name": "pair",
+"type": "address"
+},
+{
+"internalType": "address",
+"name": "gauge",
+"type": "address"
+},
+{
+"internalType": "address",
+"name": "externalBribeAddress",
+"type": "address"
+},
+{
+"components": [
+{
+"internalType": "address[]",
+"name": "tokens",
+"type": "address[]"
+},
+{
+"internalType": "string[]",
+"name": "symbols",
+"type": "string[]"
+},
+{
+"internalType": "uint256[]",
+"name": "decimals",
+"type": "uint256[]"
+},
+{
+"internalType": "uint256[]",
+"name": "amounts",
+"type": "uint256[]"
+}
+],
+"internalType": "struct RewardAPIV2.Tokens",
+"name": "externalBribes",
+"type": "tuple"
+},
+{
+"internalType": "address",
+"name": "internalBribeAddress",
+"type": "address"
+},
+{
+"components": [
+{
+"internalType": "address[]",
+"name": "tokens",
+"type": "address[]"
+},
+{
+"internalType": "string[]",
+"name": "symbols",
+"type": "string[]"
+},
+{
+"internalType": "uint256[]",
+"name": "decimals",
+"type": "uint256[]"
+},
+{
+"internalType": "uint256[]",
+"name": "amounts",
+"type": "uint256[]"
+}
+],
+"internalType": "struct RewardAPIV2.Tokens",
+"name": "internalBribes",
+"type": "tuple"
+}
+],
+"internalType": "struct RewardAPIV2.Bribe[]",
+"name": "bribes",
+"type": "tuple[]"
+}
+],
+"internalType": "struct RewardAPIV2.Reward",
+"name": "_reward",
+"type": "tuple"
+}
+],
+"stateMutability": "view",
+"type": "function"
+},
+{
+"inputs": [
+{
+"internalType": "address",
+"name": "_voter",
+"type": "address"
+},
+{
+"internalType": "address",
+"name": "_rewardsDistributor",
+"type": "address"
+}
+],
+"name": "initialize",
+"outputs": [],
+"stateMutability": "nonpayable",
+"type": "function"
+},
+{
+"inputs": [],
+"name": "pairFactory",
+"outputs": [
+{
+"internalType": "contract IPairFactory",
+"name": "",
+"type": "address"
+}
+],
+"stateMutability": "view",
+"type": "function"
+},
+{
+"inputs": [],
+"name": "rewardsDistributor",
+"outputs": [
+{
+"internalType": "contract IRewardsDistributor",
+"name": "",
+"type": "address"
+}
+],
+"stateMutability": "view",
+"type": "function"
+},
+{
+"inputs": [],
+"name": "underlyingToken",
+"outputs": [
+{
+"internalType": "address",
+"name": "",
+"type": "address"
+}
+],
+"stateMutability": "view",
+"type": "function"
+},
+{
+"inputs": [],
+"name": "voter",
+"outputs": [
+{
+"internalType": "contract IVoter",
+"name": "",
+"type": "address"
+}
+],
+"stateMutability": "view",
+"type": "function"
+}
+]

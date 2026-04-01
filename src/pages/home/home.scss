@@ -1,0 +1,39 @@
+.left-blob {
+  top: 15%;
+  left: -30%;
+  opacity: 0.5;
+  @media (min-width: 768px) {
+    top: -40%;
+    left: -30%;
+    opacity: 1;
+  }
+}
+
+.right-blob {
+  right: -10%;
+  top: 20%;
+  opacity: 0.5;
+  @media (min-width: 768px) {
+    right: -30%;
+    top: -60%;
+    opacity: 1;
+  }
+}
+
+.desktop {
+  display: none;
+}
+
+.mobile {
+  display: block;
+}
+
+@media (min-width: 768px) {
+  .desktop {
+    display: block;
+  }
+
+  .mobile {
+    display: none;
+  }
+}

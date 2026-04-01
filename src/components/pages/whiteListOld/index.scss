@@ -1,0 +1,69 @@
+.flex-column {
+  flex-direction: column;
+}
+.font-13 {
+  font-size: 13px;
+}
+.font-14 {
+  font-size: 14px;
+}
+
+.input-number {
+  margin: 10px 6px;
+  width: 50px;
+  min-width: 50px;
+  max-width: 80px;
+  color: #232323;
+  text-align: center;
+  font-family: Nexa;
+  height: 32px;
+  line-height: 40px;
+  padding: 0;
+}
+.hover-img:hover {
+  cursor: pointer;
+  opacity: 0.8;
+}
+
+.box-row {
+  margin: 0 20px;
+}
+
+.thin-wallet-btn {
+  width: 80%;
+  text-align: center;
+  color: #FFFFFF;
+  background-image:linear-gradient(180deg,#f06500,#f28b03);
+  background-size: 300% 100%;
+
+}
+.grey-wallet-btn {
+  width: 80%;
+  text-align: center;
+  color: #848484!important;
+  background: #3a3939;
+}
+
+.screen-w-600px {
+  width: 600px;
+  padding: 20px;
+  border-radius: 23px;
+}
+
+@media (max-width: 800px) {
+  .screen-w-600px {
+    width: 400px;
+    padding: 20px;
+    border-radius: 23px;
+  }
+}
+
+@media (max-width: 500px) {
+  .screen-w-600px {
+    width: 88vw;
+    padding: 20px;
+    border-radius: 23px;
+  }
+}
+
+

@@ -1,0 +1,9 @@
+<svg id="remove-button" xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 36 36">
+  <rect id="Rectangle_9631" data-name="Rectangle 9631" width="36" height="36" fill="none"/>
+  <g id="close-button" transform="translate(11.635 11.203)">
+    <g id="Group_12486" data-name="Group 12486">
+      <path id="Line_320" data-name="Line 320" d="M12.272,13.169l.9-.9L.473-.424l-.9.9Z" transform="translate(0.424 0.424)" fill="#fff"/>
+      <path id="Line_1416" data-name="Line 1416" d="M.473,13.169l12.7-12.7-.9-.9-12.7,12.7Z" transform="translate(0.424 0.424)" fill="#fff"/>
+    </g>
+  </g>
+</svg>

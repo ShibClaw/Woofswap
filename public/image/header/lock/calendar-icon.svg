@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="40" height="40" viewBox="0 0 40 40">
+  <defs>
+    <linearGradient id="linear-gradient" x1="0.07" x2="1" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#f06500"/>
+      <stop offset="1" stop-color="#f28b03"/>
+    </linearGradient>
+  </defs>
+  <g id="calendar-icon" transform="translate(-7542 -11283)">
+    <rect id="Rectangle_7401" data-name="Rectangle 7401" width="40" height="40" transform="translate(7542 11283)" fill="none"/>
+    <g id="Icon" transform="translate(7547 11288)">
+      <path id="Path_25793" data-name="Path 25793" d="M21.5,3.857H15.929V2.929a.929.929,0,0,0-1.857,0v.929H8.5V2.929a.929.929,0,0,0-1.857,0v.929H4.786A2.787,2.787,0,0,0,2,6.643V25.214A2.787,2.787,0,0,0,4.786,28H25.214A2.787,2.787,0,0,0,28,25.214V6.643a2.787,2.787,0,0,0-2.786-2.786H23.357V2.929a.929.929,0,1,0-1.857,0Zm4.643,7.429V25.214a.929.929,0,0,1-.929.929H4.786a.929.929,0,0,1-.929-.929V11.286ZM23.357,5.714v.929a.929.929,0,1,1-1.857,0V5.714H15.929v.929a.929.929,0,1,1-1.857,0V5.714H8.5v.929a.929.929,0,1,1-1.857,0V5.714H4.786a.929.929,0,0,0-.929.929V9.429H26.143V6.643a.929.929,0,0,0-.929-.929Z" fill-rule="evenodd" fill="url(#linear-gradient)"/>
+    </g>
+  </g>
+</svg>

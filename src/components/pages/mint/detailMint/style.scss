@@ -1,0 +1,225 @@
+.main-wrapper {
+  overflow-x: clip;
+
+  .how-to-mint-wrapper {
+    margin-top: 70px;
+    @media (min-width: 768px) {
+      margin-top: 95px;
+    }
+
+    .heading {
+      background: transparent linear-gradient(90deg, #ed00c9 0%, #bd00ed 100%) 0% 0% no-repeat padding-box;
+      background-clip: text;
+      -webkit-background-clip: text;
+      width: fit-content;
+      -webkit-text-fill-color: transparent;
+      font-size: 27px;
+      font-weight: 500;
+      line-height: 34px;
+      @media (min-width: 768px) {
+        font-size: 42px;
+        line-height: 48px;
+      }
+    }
+
+    .cards-wrapper-desktop {
+      @media (min-width: 640px) {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+      @media (min-width: 1024px) {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+
+      margin-top: 46px;
+      display: none;
+      gap: 24px;
+
+      .card-wrapper {
+        background: transparent linear-gradient(90deg, #ed00c9 0%, #bd00ed 100%) 0% 0% no-repeat padding-box;
+        border-radius: 3px;
+        padding: 1px;
+        background-size: 300% 300%;
+        animation: gradient 2s ease infinite;
+        box-shadow: 0 0 50px #48003d;
+        @keyframes gradient {
+          0% {
+            background-position: 0% 50%;
+          }
+
+          50% {
+            background-position: 100% 50%;
+          }
+
+          100% {
+            background-position: 0% 50%;
+          }
+        }
+
+        .inner-card {
+          background:#151b28;
+          border-radius: 3px;
+          padding: 23px 20px 30px;
+
+          .step {
+            font-size: 20px;
+            line-height: 28px;
+            letter-spacing: 0.4px;
+            color: #fff;
+            font-weight: 300;
+            text-shadow: 0 0 15px #fff;
+          }
+
+          img {
+            z-index: 10;
+            position: relative;
+            -webkit-filter: drop-shadow(0 0 0 #8e93ff);
+            filter: drop-shadow(0 0 0 #8e93ff);
+            margin-top: 33px;
+            margin-bottom: 39px;
+            animation: mymove 5s infinite;
+            @keyframes mymove {
+              50% {
+                -webkit-filter: drop-shadow(0 0 40px #8e93ff);
+                filter: drop-shadow(0 0 40px #8e93ff);
+              }
+            }
+          }
+
+          .card-title {
+            background: transparent linear-gradient(90deg, #ed00c9 0%, #bd00ed 100%) 0% 0% no-repeat padding-box;
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            width: fit-content;
+            font-weight: 500;
+            line-height: 24px;
+          }
+
+          .card-para {
+            color: white;
+            font-size: 18px;
+            line-height: 22px;
+            margin-top: 6px;
+            opacity: 0.7;
+          }
+        }
+      }
+    }
+  }
+
+  .card-wrapper-mobile {
+    background: transparent linear-gradient(90deg, #ed00c9 0%, #bd00ed 100%) 0% 0% no-repeat padding-box;
+    border-radius: 3px;
+    padding: 1px;
+    background-size: 300% 300%;
+    animation: gradient 2s ease infinite;
+    box-shadow: 0 0 50px #48003d;
+    @keyframes gradient {
+      0% {
+        background-position: 0% 50%;
+      }
+
+      50% {
+        background-position: 100% 50%;
+      }
+
+      100% {
+        background-position: 0% 50%;
+      }
+    }
+
+    .inner-card-mobile {
+      background:#151b28;
+      border-radius: 3px;
+      padding: 16px 22px 22px;
+
+      .step-mobile {
+        font-size: 18px;
+        line-height: 28px;
+        letter-spacing: 0.36px;
+        color: #fff;
+        text-shadow: 0 0 15px #fff;
+      }
+
+      .step-img-mobile {
+        margin-top: 36px;
+        margin-bottom: 15px;
+      }
+
+      .card-title-mobile {
+        background: transparent linear-gradient(90deg, #ed00c9 0%, #bd00ed 100%) 0% 0% no-repeat padding-box;
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        width: fit-content;
+        font-size: 23px;
+        font-weight: 500;
+        line-height: 28px;
+      }
+
+      .card-para-mobile {
+        color: #e3e1ef;
+        font-size: 15px;
+        line-height: 25px;
+        margin-top: 8px;
+        opacity: 0.88;
+        max-width: 250px;
+      }
+    }
+  }
+
+  .slider-main {
+    height: 253px !important;
+    padding-top: 60px;
+
+    @media (min-width: 640px) {
+      display: none;
+    }
+
+    .slick-track {
+      margin-left: 50px !important;
+    }
+
+    .slick-current {
+      margin-left: 40px !important;
+      margin-right: 16px !important;
+    }
+
+    .slick-dots {
+      display: flex;
+      justify-content: center;
+      top: 12px !important;
+      margin: 0;
+      list-style-type: none;
+      pointer-events: none;
+      text-align: left;
+      margin-left: 20px;
+
+      li {
+        margin-right: 20px !important;
+        width: 68px !important;
+        height: 4px !important;
+        overflow: hidden !important;
+        @media screen and (max-width: 480px) {
+          height: 4px !important;
+        }
+      }
+
+      button {
+        display: block;
+        width: 68px !important;
+        height: 4px !important;
+        padding: 0;
+        background-color: #40355d !important;
+        border: none;
+        border-radius: 0%;
+        text-indent: -9999px;
+      }
+
+      li.slick-active button {
+        background-color: #ed00c9 !important;
+      }
+    }
+  }
+}

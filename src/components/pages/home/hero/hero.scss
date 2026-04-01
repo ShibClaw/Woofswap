@@ -1,0 +1,188 @@
+.hero-wrapper {
+  // arrow animation
+
+  .arrows {
+    width: 55px;
+    height: 72px;
+    position: absolute;
+    left: 46%;
+    bottom: 40%;
+
+    @media (min-width: 768px) {
+      bottom: 30%;
+    }
+
+    @media (min-width: 1280px) {
+      bottom: 20%;
+      left: 47%;
+    }
+
+    path {
+      stroke: white;
+      fill: transparent;
+      stroke-width: 2px;
+      animation: arrow 2s infinite;
+      -webkit-animation: arrow 2s infinite;
+
+      &.a1 {
+        animation-delay: -1s;
+        -webkit-animation-delay: -1s;
+
+        /* Safari and Chrome */
+      }
+
+      &.a2 {
+        animation-delay: -0.5s;
+        -webkit-animation-delay: -0.5s;
+
+        /* Safari and Chrome */
+      }
+
+      &.a3 {
+        animation-delay: 0s;
+        -webkit-animation-delay: 0s;
+
+        /* Safari and Chrome */
+      }
+    }
+
+    @keyframes arrow {
+      0% {
+        opacity: 0;
+      }
+
+      40% {
+        opacity: 1;
+      }
+
+      80% {
+        opacity: 0;
+      }
+
+      100% {
+        opacity: 0;
+      }
+    }
+
+    @keyframes arrow
+
+    /*Safari and Chrome*/ {
+      0% {
+        opacity: 0;
+      }
+
+      40% {
+        opacity: 1;
+      }
+
+      80% {
+        opacity: 0;
+      }
+
+      100% {
+        opacity: 0;
+      }
+    }
+  }
+
+  .hero-box {
+    display: flex;
+    justify-content: center;
+    max-width: 100%;
+    padding: 0 24px;
+    height: 100%;
+
+    @media (min-width: 768px) {
+      padding: 0 80px;
+    }
+
+    @media (min-width: 1280px) {
+      max-width: 80%;
+      padding: 0;
+    }
+
+    .why-img-item {
+      background: transparent linear-gradient(166deg, #09033300 0%, #ed00c9 27%, #bd00ed 73%, #09033300 100%) 0% 0% no-repeat padding-box;
+      padding: 1px;
+      margin-top: -30px;
+      border-radius: 4px;
+      background-size: 300% 300%;
+      position: relative;
+      animation: gradient 2s ease infinite;
+      box-shadow: 0 0 50px #48003d;
+
+      @media (min-width: 960px) {
+        margin-top: -70px;
+      }
+
+      @keyframes gradient {
+        0% {
+          background-position: 0% 50%;
+        }
+
+        50% {
+          background-position: 100% 50%;
+        }
+
+        100% {
+          background-position: 0% 50%;
+        }
+      }
+
+      .why-img-item-body {
+        background:#151b28;
+        padding: 20px;
+        display: flex;
+        height: auto;
+        justify-content: center;
+        flex-direction: column;
+        border-radius: 4px;
+        align-items: center;
+
+        @media (min-width: 960px) {
+          flex-direction: row;
+          padding: 33px 24px;
+          align-items: center;
+          height: auto;
+        }
+
+        @media (min-width: 1024px) {
+          padding: 33px 36px;
+        }
+
+        @media (min-width: 1280px) {
+          padding: 33px 40px;
+        }
+
+        h2 {
+          font-weight: 500;
+          font-size: 32px;
+          line-height: 40px;
+          letter-spacing: 1.44px;
+          color: #fff;
+          text-align: center;
+          text-shadow: 0 0 33px #9592a7;
+          margin-bottom: 12px;
+
+          @media (min-width: 960px) {
+            margin-bottom: 0;
+            font-size: 33px;
+            margin-right: 15px;
+            white-space: nowrap;
+          }
+
+          @media (min-width: 1280px) {
+            font-size: 42px;
+            line-height: 69px;
+            margin-right: 30px;
+          }
+
+          @media (min-width: 1600px) {
+            font-size: 42px;
+            margin-right: 37px;
+          }
+        }
+      }
+    }
+  }
+}

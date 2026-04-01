@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64">
+  <g id="coinbase-wallet-logo" transform="translate(-0.001 -0.059)">
+    <rect id="Rectangle" width="64" height="64" rx="32" transform="translate(0.001 0.059)" fill="#1660ff"/>
+    <path id="Combined-Shape" d="M94.4,76A18.4,18.4,0,1,1,76,94.4,18.4,18.4,0,0,1,94.4,76Zm4.907,12.471H89.493a1.022,1.022,0,0,0-1.022,1.022h0v9.813a1.022,1.022,0,0,0,1.022,1.022h9.813a1.022,1.022,0,0,0,1.022-1.022h0V89.493a1.022,1.022,0,0,0-1.022-1.022Z" transform="translate(-62.4 -62.4)" fill="#fff" fill-rule="evenodd"/>
+  </g>
+</svg>

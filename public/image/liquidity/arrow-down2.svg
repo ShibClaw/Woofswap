@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40">
+  <g id="arrow-down" transform="translate(-2350 -362)">
+    <rect id="Rectangle_11093" data-name="Rectangle 11093" width="40" height="40" rx="3" transform="translate(2350 362)" fill="rgba(255,255,255,0.11)" opacity="0.5"/>
+    <path id="sorting" d="M17.188,18.752l3.94,3.94a.985.985,0,0,0,1.393,0l3.94-3.94a.985.985,0,0,0-1.393-1.393L22.81,19.617V6.235a.985.985,0,0,0-1.97,0V19.617l-2.259-2.258a.985.985,0,0,0-1.393,1.393Z" transform="translate(2348.176 367.75)" fill="#fff" fill-rule="evenodd"/>
+  </g>
+</svg>
