@@ -8,6 +8,7 @@ import { formatAmount, getLP0Symbol, getLP1Symbol, ZERO_ADDRESS } from '../../..
 import { useNavigate } from 'react-router-dom'
 import { useHarvest } from '../../../hooks/useGauge'
 import DepositModal from './depositModal'
+import { getRewardTokenSymbol } from '../../../utils/addressHelpers'
 
 const Item = ({ usd, content, account, idx, type }) => {
   const [arrowReverse, setArrowReverse] = useState()
@@ -140,7 +141,7 @@ const TableRow = ({ item, isLast, idx }) => {
       </div>
       <div className={`${isOpen ? 'block' : 'hidden'} lg:block  w-1/2 lg:w-[8%] mt-2 lg:mt-0`}>
         <p className='lg:hidden text-sm f-f-fg font-semibold'>Earnings</p>
-        <Item account={address} type={'earning'} usd={item.account.earnedUsd} content={<>{formatAmount(item.account.gaugeEarned)} WOOF</>} idx={idx} />
+        <Item account={address} type={'earning'} usd={item.account.earnedUsd} content={<>{formatAmount(item.account.gaugeEarned)} {getRewardTokenSymbol(chainId)}</>} idx={idx} />
       </div>
       <div className={`${isOpen ? 'block' : 'hidden'} lg:block w-full lg:w-[25%] mt-3.5 lg:mt-0`}>
         {address ? (

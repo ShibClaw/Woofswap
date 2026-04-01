@@ -4,6 +4,7 @@ import { useEpochTimer, useOneDayVolume, useTVL } from '../../../../hooks/useGen
 import usePrices from '../../../../hooks/usePrices'
 import { formatAmount } from '../../../../utils/formatNumber'
 import './style.scss'
+import { getRewardTokenSymbol } from '../../../../utils/addressHelpers'
 
 const Details = () => {
   const prices = usePrices()
@@ -28,7 +29,7 @@ const Details = () => {
         value: !circSupply.isZero() ? `${formatAmount(circSupply)}` : 'N/A',
       },
       {
-        title: 'WOOF PRICE',
+        title: `${getRewardTokenSymbol()} PRICE`,
         value: prices ? `$${formatAmount(prices['WOOF'])}` : 'N/A',
       },
       {
@@ -36,7 +37,7 @@ const Details = () => {
         value: oneDayVolume ? `$${formatAmount(oneDayVolume)}` : 'N/A',
       },
       {
-        title: 'TOTAL LOCKED WOOF',
+        title: `TOTAL LOCKED ${getRewardTokenSymbol()}`,
         value: lockedSupply ? `${formatAmount(lockedSupply)}` : 'N/A',
       },
       {

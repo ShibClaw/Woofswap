@@ -9,6 +9,7 @@ import { useClaimBribes, useClaimFees, useClaimRebase } from '../../../hooks/use
 import NoFound from '../../common/NoFound'
 import usePrices from '../../../hooks/usePrices'
 import { useWeb3ModalProvider, useWeb3ModalAccount } from '@web3modal/ethers/react'
+import { getRewardTokenSymbol } from '../../../utils/addressHelpers'
 
 const sortEnabled = false
 
@@ -160,7 +161,7 @@ const Index = ({ rewards, veWOOF }) => {
                       </div>
                       <div className='flex flex-col items-start mt-2 lg:mt-0 w-1/2 lg:w-[15%] justify-center web-table-row'>
                         <p className='lg:hidden text-sm f-f-fg font-medium text-table-row-title'>Reward</p>
-                        <p>{formatAmount(pool.rebase_amount)} WOOF</p>
+                        <p>{formatAmount(pool.rebase_amount)} {getRewardTokenSymbol(chainId)}</p>
                         {/*<div*/}
                         {/*  onMouseEnter={() => {*/}
                         {/*    setArrowReverse(`tip4${idx}`)*/}

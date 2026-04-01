@@ -1,5 +1,14 @@
 import { defaultChainId } from '../config/constants'
 import addresses from '../config/constants/contracts'
+
+export const getRewardTokenSymbol = (chainId) => {
+  const cid = chainId || (isNaN(window.currChainId) ? defaultChainId : window.currChainId)
+  return Number(cid) === 196 ? 'JACE' : 'WOOF'
+}
+
+export const getVoteTokenSymbol = (chainId) => {
+  return 'veWOOF'
+}
 import { GAMMA_UNIPROXY_ADDRESSES, NONFUNGIBLE_POSITION_MANAGER_ADDRESSES, QUOTER_ADDRESSES } from '../config/constants/v3/addresses'
 
 export const getAddress = (address) => {

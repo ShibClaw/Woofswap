@@ -14,6 +14,7 @@ import NoFound from '../../common/NoFound'
 import MigrateV2Modal from '../liquidity/migrateV2Modal'
 import MigrateV3Modal from '../liquidity/migrateV3Modal'
 import { GammasContext } from '../../../context/GammasContext'
+import { getRewardTokenSymbol } from '../../../utils/addressHelpers'
 
 const ItemWithTooltip = ({ usd, content, account, idx, type }) => {
   const [arrowReverse, setArrowReverse] = useState()
@@ -132,7 +133,7 @@ const TableRow = ({ item, isLast, idx, isMigration }) => {
       <div className={`${isOpen ? 'block' : 'hidden'} lg:block  w-1/2 lg:w-[18%] web-table-row  mt-2 lg:mt-0`}>
         <p className='lg:hidden text-sm f-f-fg font-medium text-table-row-title'>Earnings</p>
         <>
-        {formatAmount(item.account.gaugeEarned)} WOOF
+        {formatAmount(item.account.gaugeEarned)} {getRewardTokenSymbol(chainId)}
         </>
       </div>
       <div className={`${isOpen ? 'block' : 'hidden'} lg:block w-full lg:w-[25%] mt-3.5 lg:mt-0`}>

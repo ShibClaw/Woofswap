@@ -46,16 +46,6 @@ const links = [
         link: '/liquidity/liquidity',
         isAll:true,
     },
-    {
-        name: 'Token',
-        link: '/tokenOperations',
-        isAll:true,
-    },
-    {
-        name: 'X0',
-        link: '/X0',
-        isAll:true,
-    },
 
     //     {
     //       name: 'Migration',
@@ -240,23 +230,17 @@ const Header = () => {
 
     window.currChainId = chainId
     const tablinks = [
-        // {
-        //     chainId:719,
-        //     name: 'Puppy Net-719',
-        //     link: 'Puppy Net-719',
-        //     icon:'/image/icons/shib-logo.webp'
-        // },
-        {
-            chainId:10088,
-            name: 'GateLayer',
-            link: 'GT',
-            icon:'/image/tokens/GT.png'
-        },
         {
             chainId:109,
             name: 'Shibarium',
             link: 'Shibarium',
             icon:'/image/icons/shib-logo.webp'
+        },
+        {
+            chainId:10088,
+            name: 'GateLayer',
+            link: 'GT',
+            icon:'/image/tokens/GT.png'
         },
         {
             chainId:2420,

@@ -18,18 +18,18 @@ if (!projectId) {
 // 2. Set chains
 const chains = [
   {
-    chainId: 10088,
-    name: 'GateLayer',
-    currency: 'GT',
-    explorerUrl: 'https://gatelayer-mainnet.gatenode.cc',
-    rpcUrl: 'https://gatelayer-mainnet.gatenode.cc'
-  },
-  {
     chainId: 109,
     name: 'Shibarium',
     currency: 'BONE',
     explorerUrl: 'https://www.shibariumscan.io',
     rpcUrl: 'https://rpc.shibarium.shib.io'
+  },
+  {
+    chainId: 10088,
+    name: 'GateLayer',
+    currency: 'GT',
+    explorerUrl: 'https://gatelayer-mainnet.gatenode.cc',
+    rpcUrl: 'https://gatelayer-mainnet.gatenode.cc'
   },
   {
     chainId: 196,
@@ -59,8 +59,8 @@ const ethersConfig = defaultConfig({
   enableEIP6963: true,
   enableInjected: true,
   enableCoinbase: true,
-  rpcUrl: 'https://gatelayer-mainnet.gatenode.cc',
-  defaultChainId: 10088,
+  rpcUrl: 'https://rpc.shibarium.shib.io',
+  defaultChainId: 109,
 })
 
 const  web3modalOptions = {

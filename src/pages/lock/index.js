@@ -15,6 +15,7 @@ import { useWithdraw } from '../../hooks/useLock'
 import { useWOOFAsset } from '../../hooks/useGeneral'
 import NoFound from '../../components/common/NoFound'
 import usePrices from '../../hooks/usePrices'
+import { getRewardTokenSymbol } from '../../utils/addressHelpers'
 // import ReactTooltip from 'react-tooltip'
 
 const Lock = () => {
@@ -73,7 +74,7 @@ const Lock = () => {
               <h1 className='text-page-title text-[34px] md:text-[42px] font-medium text-white  f-f-fg'>Lock</h1>
 
               <p className='text-page-title-tips text-[#b8b6cb] text-base md:text-lg leading-[22px] md:leading-6 mt-24px'>
-                Lock WOOF into veWOOF to earn and govern. Vote with veWOOF to earn bribes and trading fees. veWOOF can be transferred, merged and split. You can hold
+                Lock {getRewardTokenSymbol(chainId)} into veWOOF to earn and govern. Vote with veWOOF to earn bribes and trading fees. veWOOF can be transferred, merged and split. You can hold
                 multiple positions.{' '}
                 <a href='https://woofswap.gitbook.io/woofswap/introduction/woofswap' target='_blank' rel='noreferrer'>
                    <img className="icon-size-help icon-help invert-img" src="/image/swap/question-mark.png" />
@@ -176,7 +177,7 @@ const Lock = () => {
                                   <div className='w-1/2 web-table-row'>
                                     <div className='lg:hidden text-sm f-f-fg font-medium text-table-row-title'>Locked Amount</div>
                                     <div className='text-base sm:text-[17px] lg:text-[15px] xl:text-[17px]'>{formatAmount(item.amount)} </div>
-                                    <div className='text-[15px] text-dimGray'>WOOF</div>
+                                    <div className='text-[15px] text-dimGray'>{getRewardTokenSymbol(chainId)}</div>
                                     {/*<div className='text-[15px] text-dimGray'>${formatAmount(item.amount.times(prices['WOOF']))}</div>*/}
                                   </div>
                                 </div>

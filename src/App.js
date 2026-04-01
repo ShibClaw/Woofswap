@@ -10,8 +10,6 @@ import Rewards from './pages/rewards'
 // import WhiteList from './pages/whiteList'
 import AddBribe from './pages/whiteList/bribeModal'
 import Launchpad from './pages/launchpad'
-import TokenOperations from './pages/tokenOperations'
-import X0 from './pages/x0'
 
 import Header from './components/common/Header'
 import Footer from './components/common/Footer'
@@ -67,8 +65,6 @@ const App = () => {
                       <Route path='/liquidity/manage/:address' element={<ManageLiquidity />} exact />
                       <Route path='/lock' element={<Lock />} exact />
                       <Route path='/vote' element={<Vote />} exact />
-                      <Route path='/tokenOperations' element={<TokenOperations />} exact />
-                      <Route path='/X0' element={<X0 />} exact />
 
                       <Route path='/vote/:veId' element={<Vote />} exact />
                       <Route path='/rewards' element={<Rewards />} exact />

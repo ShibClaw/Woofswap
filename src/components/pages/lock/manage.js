@@ -7,6 +7,7 @@ import { formatAmount, isInvalidAmount } from '../../../utils/formatNumber'
 import { useIncreaseAmount, useIncreaseDuration } from '../../../hooks/useLock'
 import { customNotify } from '../../../utils/notify'
 import { periodLevels } from '../../../config/constants'
+import { getRewardTokenSymbol } from '../../../utils/addressHelpers'
 
 const week = 86400 * 7 * 1000
 const minTimeStamp = 86400 * 14 * 1000
@@ -79,7 +80,7 @@ const ManageTab = ({ selected, theAsset }) => {
         title='Amount'
         inputAmount={amount}
         setInputAmount={setAmount}
-        symbol='WOOF'
+        symbol={getRewardTokenSymbol()}
         balance={theAsset?.balance}
         logoURIs={['/image/tokens/WOOF.png']}
       />

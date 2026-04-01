@@ -26,27 +26,16 @@ const getWhitelist = async (account) => {
 
 const getBaseAssets = async (cid) => {
   try {
-      // const response = await fetch(`${backendApi}/assets`, {
     let chainId = cid;
-    let baseUrl =   'https://api.woofswap.finance/assets/shib'
+    let baseUrl = 'https://api.woofswap.finance/assets/shib'
       if(chainId == 109)
           baseUrl = "https://api.woofswap.finance/assets/shib"
       if(chainId == 196)
           baseUrl = "https://api.woofswap.finance/assets/okb"
-      if(chainId == 719)
-          baseUrl = "https://api.woofswap.finance/assets/shibtestnet"
-      if(chainId == 56)
-          baseUrl = "https://api.woofswap.finance/assets/bsc"
-      if(chainId == 2420)
-          baseUrl = "https://woofswap.finance/api/assets.json?t="+new Date().getTime()
-      if(chainId == 86)
-          baseUrl = "https://woofswap.finance/api/assetsgt.json?t="+new Date().getTime()
       if(chainId == 177)
-          baseUrl = "https://woofswap.finance/api/assetshsk.json?t="+new Date().getTime()
+          baseUrl = "https://api.woofswap.finance/assets/hashkey"
       if(chainId == 10088)
-          baseUrl = "https://woofswap.finance/api/assetsgt2.json?t="+new Date().getTime()
-      if(chainId == 860621)
-          baseUrl = "https://woofswap.finance/api/assetspgp.json?t="+new Date().getTime()
+          baseUrl = "https://api.woofswap.finance/assets/gatelayer"
       let baseAssetsCall
 
      try{
@@ -71,7 +60,7 @@ const getBaseAssets = async (cid) => {
           //     logoURI: '/image/tokens/BONE.png',
           //     price: wethPrice,
           // }
-          const nativeETH = JSON.parse( JSON.stringify(NetworksData[chainId ? chainId : 10088].nativeCurrency) )
+          const nativeETH = JSON.parse( JSON.stringify(NetworksData[chainId ? chainId : 109].nativeCurrency) )
           nativeETH.address = nativeETH.symbol
           nativeETH.logoURI = '/image/tokens/' + nativeETH.symbol + '.png'
           nativeETH.chainId = chainId
@@ -127,24 +116,15 @@ const getRouteAssets = async () => {
 
 const getPairs = async (chainId) => {
   try {
-    //const response = await fetch(`${backendApi}/pools`, {
-      let baseUrl =   'https://api.woofswap.finance/pools/shib'
-      if(chainId == 719)
-          baseUrl = "https://api.woofswap.finance/pools/shibtestnet"
-      if(chainId == 196)
-          baseUrl = "https://api.woofswap.finance/pools/okb"
+      let baseUrl = 'https://api.woofswap.finance/pools/shib'
       if(chainId == 109)
           baseUrl = "https://api.woofswap.finance/pools/shib"
-      if(chainId == 56)
-          baseUrl = "https://api.woofswap.finance/pools/bsc"
-      if(chainId == 2420)
-          baseUrl = "https://woofswap.finance/api/pools.json"
-      if(chainId == 86)
-          baseUrl = "https://woofswap.finance/api/pools.json"
+      if(chainId == 196)
+          baseUrl = "https://api.woofswap.finance/pools/okb"
       if(chainId == 177)
-          baseUrl = "https://woofswap.finance/api/pools.json"
+          baseUrl = "https://api.woofswap.finance/pools/hashkey"
       if(chainId == 10088)
-          baseUrl = "https://woofswap.finance/api/pools.json"
+          baseUrl = "https://api.woofswap.finance/pools/gatelayer"
 
 
       let pairsCall
@@ -166,23 +146,15 @@ const getPairs = async (chainId) => {
 
 const getV3Pairs = async (chainId) => {
   try {
-      let baseUrl =   'https://api.woofswap.finance/pools/shib'
-      if(chainId == 719)
-          baseUrl = "https://api.woofswap.finance/pools/shibtestnet"
-      if(chainId == 196)
-          baseUrl = "https://api.woofswap.finance/pools/okb"
+      let baseUrl = 'https://api.woofswap.finance/pools/shib'
       if(chainId == 109)
           baseUrl = "https://api.woofswap.finance/pools/shib"
-      if(chainId == 56)
-          baseUrl = "https://api.woofswap.finance/pools/bsc"
-      if(chainId == 2420)
-          baseUrl = "https://woofswap.finance/api/pools.json"
-      if(chainId == 86)
-          baseUrl = "https://woofswap.finance/api/pools.json"
+      if(chainId == 196)
+          baseUrl = "https://api.woofswap.finance/pools/okb"
       if(chainId == 177)
-          baseUrl = "https://woofswap.finance/api/pools.json"
+          baseUrl = "https://api.woofswap.finance/pools/hashkey"
       if(chainId == 10088)
-          baseUrl = "https://woofswap.finance/api/pools.json"
+          baseUrl = "https://api.woofswap.finance/pools/gatelayer"
 
       let pairsCall
 
