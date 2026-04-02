@@ -23,7 +23,7 @@
         "price": "0",
         "decimals": 6,
         "name": "USDT",
-        "logoURI": "https://woofswap.finance/image/tokens/usdt.png?t=111"
+        "logoURI": "https://raw.githubusercontent.com/ShibClaw/shibarium/refs/heads/main/images/usdt.png"
       },
       {
         "symbol": "WHSK",
