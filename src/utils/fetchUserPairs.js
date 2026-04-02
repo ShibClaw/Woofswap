@@ -6,6 +6,7 @@ import { multicall } from './multicall'
 export const fetchVoteTotalWeight = async (web3) => {
 
   const voterContract = getVoterContract(web3)
+  if (!voterContract) return 0
   const totalWeight = await voterContract.totalWeight()
   return totalWeight;
 }
@@ -13,12 +14,19 @@ export const fetchVoteTotalWeight = async (web3) => {
 export const fetchUserPairs = async (web3, account,chainId) => {
 
   const factoryContract = getFactoryContract(web3)
-  //const pairLength = await factoryContract.methods.allPairsLength().call()
-  const pairLength = parseInt( await factoryContract.allPairsLength())
+  if (!factoryContract) return []
+  let pairLength
+  try {
+    pairLength = parseInt( await factoryContract.allPairsLength())
+  } catch (e) {
+    console.warn('allPairsLength call failed for chainId', chainId, e.message)
+    return []
+  }
 
 
 
     const pairSwapAPIContract = getPairSwapAPIContract(web3)
+    if (!pairSwapAPIContract) return []
     try{
       //const pairInfos = await pairSwapAPIContract.getAllPair(account ? account :'0x0000000000000000000000000000000000000000', pairLength, 0)
       let pairInfos = [],pindex=0,plen=80;

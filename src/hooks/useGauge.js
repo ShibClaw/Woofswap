@@ -64,7 +64,6 @@ const useStake = () => {
           }),
         )
       }
-      debugger
       const params = [toWei(amount, pair.decimals).toFixed(0),0]
       const gaugeContract = getGaugeContract(web3, pair.gauge.address)
       try {
@@ -259,6 +258,11 @@ const useAllHarvest = () => {
             }),
         )
         setPending(true)
+        if (!voterContract) {
+            console.warn('Voter contract not available on this chain')
+            setPending(false)
+            return
+        }
         try {
             await sendContract(dispatch, key, harvestuuid, voterContract, 'claimRewards', [memory_gauges,memory_tokens], address)
         } catch (err) {

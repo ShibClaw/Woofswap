@@ -4,6 +4,7 @@ import { fromWei } from './formatNumber'
 
 export const fetchUserVeWOOFs = async (web3, account) => {
   const veWOOFAPIContract = getVeWOOFV3APIContract(web3)
+  if (!veWOOFAPIContract) return []
   const veWOOFInfos = await veWOOFAPIContract.getNFTFromAddress(account)
   return veWOOFInfos.map((veWOOF) => {
     const lockedEnd = Number(veWOOF[7])

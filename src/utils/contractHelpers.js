@@ -99,19 +99,18 @@ export const readOnlyProvider = {
 
     }
     ;
+const ZERO_ADDRESS = '0x0000000000000000000000000000000000000000'
+
 const getContract = (abi, address, web3) => {
-  // const RPC_URL = getRpcUrl()
-  // const httpProvider = new Web3.providers.HttpProvider(RPC_URL, { timeout: 10000 })
-  // const web3NoAccount = new Web3(httpProvider)
-  //
-  // const _web3 = web3 ?? web3NoAccount
-  // return new _web3.eth.Contract(abi, address)
+  if (!address || address === ZERO_ADDRESS) {
+    return null
+  }
 
   if(web3 == null){
     return new ethers.Contract(
         address,
         abi,
-        readOnlyProvider[window.currChainId?window.currChainId:10088]
+        readOnlyProvider[window.currChainId?window.currChainId:109]
     );
 
   }else

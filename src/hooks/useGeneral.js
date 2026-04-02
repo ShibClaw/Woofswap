@@ -40,10 +40,14 @@ const useVoteEmissions = () => {
 
   useEffect(() => {
     const fetchSupply = async () => {
-      const [totalWeight, weekly_emission] = await Promise.all([voterContract.totalWeight(), minterContract.weekly_emission()])
-      const lpEmissionRes = fromWei(weekly_emission).times(0.675)
-      setLpEmission(lpEmissionRes)
-      setVoteEmissions(Number(totalWeight) > 0 ? lpEmissionRes.times(theAsset.price).div(100) : new BigNumber(0))
+      try {
+        const [totalWeight, weekly_emission] = await Promise.all([voterContract.totalWeight(), minterContract.weekly_emission()])
+        const lpEmissionRes = fromWei(weekly_emission).times(0.675)
+        setLpEmission(lpEmissionRes)
+        setVoteEmissions(Number(totalWeight) > 0 ? lpEmissionRes.times(theAsset.price).div(100) : new BigNumber(0))
+      } catch (err) {
+        console.warn('fetchSupply error:', err.message)
+      }
     }
     if (voterContract && minterContract && theAsset) {
       fetchSupply()
@@ -89,25 +93,30 @@ const useOneDayVolume = () => {
 
   useEffect(() => {
     const fetchVolume = async () => {
-      const curblockNumber = await web3.provider.getBlockNumber()
-      const last = curblockNumber - 28800
+      try {
+        if (!web3 || !web3.provider) return
+        const curblockNumber = await web3.provider.getBlockNumber()
+        const last = curblockNumber - 28800
 
-      const [result, oneDayResult] = await Promise.all([
-        client.query({
-          query: TOTAL_VOLUME_DATA(),
-          fetchPolicy: 'cache-first',
-        }),
-        client.query({
-          query: TOTAL_VOLUME_DATA(last),
-          fetchPolicy: 'cache-first',
-        }),
-      ])
+        const [result, oneDayResult] = await Promise.all([
+          client.query({
+            query: TOTAL_VOLUME_DATA(),
+            fetchPolicy: 'cache-first',
+          }),
+          client.query({
+            query: TOTAL_VOLUME_DATA(last),
+            fetchPolicy: 'cache-first',
+          }),
+        ])
 
-      if (result?.data?.factories[0]?.totalVolumeUSD && oneDayResult?.data?.factories[0]?.totalVolumeUSD) {
-        setOneDayVolume(Number(result?.data?.factories[0]?.totalVolumeUSD) - Number(oneDayResult?.data?.factories[0]?.totalVolumeUSD))
+        if (result?.data?.factories[0]?.totalVolumeUSD && oneDayResult?.data?.factories[0]?.totalVolumeUSD) {
+          setOneDayVolume(Number(result?.data?.factories[0]?.totalVolumeUSD) - Number(oneDayResult?.data?.factories[0]?.totalVolumeUSD))
+        }
+      } catch (err) {
+        console.warn('fetchVolume error:', err.message)
       }
     }
-    fetchVolume()
+    if (web3) fetchVolume()
   }, [fastRefresh, web3])
 
   return oneDayVolume

@@ -5,6 +5,7 @@ import { getMulticallContract } from './contractHelpers'
 export const multicall = async (abi, calls,web3) => {
 
   const multi = getMulticallContract(web3)
+  if (!multi) return []
   const itf = new Interface(abi)
 
   const calldata = calls.map((call) => ({

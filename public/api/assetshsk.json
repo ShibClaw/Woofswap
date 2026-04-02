@@ -8,17 +8,35 @@
     "name": "WoofSwap Finance",
     "tokens": [
       {
+        "symbol": "HEST",
+        "address": "0x19C39b7664D7f89E72d57F0C996631A4d3222D26",
+        "chainId": 177,
+        "price": "0",
+        "decimals": 18,
+        "name": "HEST",
+        "logoURI": "https://raw.githubusercontent.com/ShibClaw/shibarium/refs/heads/main/images/NULL.png"
+      },
+      {
+        "symbol": "USDT",
+        "address": "0xF1B50eD67A9e2CC94Ad3c477779E2d4cBfFf9029",
+        "chainId": 177,
+        "price": "0",
+        "decimals": 6,
+        "name": "USDT",
+        "logoURI": "https://woofswap.finance/image/tokens/usdt.png?t=111"
+      },
+      {
         "symbol": "WHSK",
         "address": "0xB210D2120d57b758EE163cFfb43e73728c471Cf1",
         "chainId": 177,
         "price": "0",
         "decimals": 18,
-        "name": "Wrapped HSK",
-        "logoURI": "https://woofswap.finance/image/tokens/HSK.png"
+        "name": "WHSK",
+        "logoURI": "https://www.woofswap.finance/image/tokens/HSK.png"
       }
     ],
     "logoURI": "https://docs.woofswap.finance/woof.svg",
-    "timestamp": 1758373013
+    "timestamp": 1711336713
   },
   "code": 200,
   "msg": "Success"

@@ -34,25 +34,29 @@ const useWeb3 = () => {
   const [web3, setweb3] = useState(null)
   const { address, chainId, isConnected } = useWeb3ModalAccount()
 
-  useEffect(async () => {
-    const provider = await modal.requestProvider();
-    if(provider){
-      //console.log("SafeAppWeb3Modal------------1111")
-      const ethersProvider = new ethers.BrowserProvider(provider)
-      const loadedAsSafeApp = await modal.isSafeApp();
-      //console.log("loadedAsSafeApp",loadedAsSafeApp)
-      const signer = await ethersProvider.getSigner()
-      setweb3(signer)
-    }else {
-      if (walletProvider) {
-        //console.log("walletProvider------------")
-        const ethersProvider = new ethers.BrowserProvider(walletProvider)
-        const signer = await ethersProvider.getSigner()
-        setweb3(signer)
+  useEffect(() => {
+    let cancelled = false
+    const init = async () => {
+      try {
+        const provider = await modal.requestProvider();
+        if (cancelled) return
+        if(provider){
+          const ethersProvider = new ethers.BrowserProvider(provider)
+          const signer = await ethersProvider.getSigner()
+          if (!cancelled) setweb3(signer)
+        }else {
+          if (walletProvider) {
+            const ethersProvider = new ethers.BrowserProvider(walletProvider)
+            const signer = await ethersProvider.getSigner()
+            if (!cancelled) setweb3(signer)
+          }
+        }
+      } catch (err) {
+        console.warn('useWeb3 init error:', err.message)
       }
     }
-
-    window.currWeb3 = web3
+    init()
+    return () => { cancelled = true }
   }, [walletProvider,chainId,isConnected,address])
 
   return web3

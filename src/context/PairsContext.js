@@ -60,7 +60,7 @@ const PairsContextProvider = ({ children }) => {
           var ethwoof = '0x63Db6ba9E512186C2FAaDaCEF342FB4A40dc577c'
           var usdtwoof = '0xA051eF9A6FBea340Bb734d022e7B6a3aD9fD9B06'
           let userInfos = []
-          if (address || true) {
+          if (address) {
             userInfos = await fetchUserPairs(readOnlyProvider[chainId], address,chainId)
           }
 

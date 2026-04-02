@@ -196,6 +196,16 @@ const calculateGasMargin =  function (value) {
 }
 
 const sendContract = (dispatch, key, uuid, contract, method, params, account, msgValue = '0') => {
+  if (!contract) {
+    dispatch(
+      updateTransaction({
+        key,
+        uuid,
+        status: TransactionType.FAILED,
+      }),
+    )
+    return Promise.reject(new Error('Contract not available on this chain'))
+  }
   let hash,calculateGasLimit
   dispatch(
     updateTransaction({
@@ -414,6 +424,7 @@ const sendV3Contract = (dispatch, key, uuid, web3, from, to, data, msgValue = '0
 }
 
 const getAllowance = async (contract, target, account) => {
+  if (!contract) return 0
   try {
     return await contract.allowance(account, target)
   } catch (ex) {

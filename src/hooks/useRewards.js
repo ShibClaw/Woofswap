@@ -44,7 +44,7 @@ const useGetExpectedClaimForNextEpoch = (veWOOF) => {
             }
         }
 
-        if (pairs.length > 0 && veWOOF) {
+        if (pairs.length > 0 && veWOOF && useQueryApiContract) {
             fetchRewards()
         } else {
             setRewards([])
@@ -140,7 +140,7 @@ const useGetVeRewards = (veWOOF) => {
       }
     }
 
-    if (pairs.length > 0 && veWOOF) {
+    if (pairs.length > 0 && veWOOF && getVeWOOFAPIAddress()) {
       fetchRewards()
     } else {
       setRewards([])
@@ -271,7 +271,7 @@ const useAllRewards = (veWOOF) => {
             }
         }
 
-        if (userPairs.length > 0 && veWOOF) {
+        if (userPairs.length > 0 && veWOOF && rewardApiV2Contract) {
             fetchRewardsV2()
         } else {
             setRewards([])
@@ -546,7 +546,7 @@ const useExpectedRewards = (veWOOF) => {
       }
     }
 
-    if (pairs.length > 0 && veWOOF) {
+    if (pairs.length > 0 && veWOOF && getRewardsAPIAddress()) {
       fetchRewards()
     } else {
       setRewards([])
@@ -571,7 +571,7 @@ const useGetFees = () => {
           .map((pool) => {
             const found0 = baseAssets.find((ele) => ele.address.toLowerCase() === pool.token0.address.toLowerCase())
             const found1 = baseAssets.find((ele) => ele.address.toLowerCase() === pool.token1.address.toLowerCase())
-            const totalUsd = pool.address.token0claimable.times(found0?.price).plus(pool.account.token1claimable.times(found1?.price))
+            const totalUsd = pool.account.token0claimable.times(found0?.price || 0).plus(pool.account.token1claimable.times(found1?.price || 0))
             return {
               ...pool,
               totalUsd,
